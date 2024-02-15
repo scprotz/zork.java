@@ -1,5 +1,8 @@
 package zork;
 
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 
 public class Dso2
@@ -190,6 +193,33 @@ public class Dso2
 	/* SCRUPD- UPDATE WINNER'S SCORE */
 	void scrupd_(int n)
 	{
+
+		if(n != 0)
+		{
+			try
+			{
+				File points_file = new File("points.csv");
+				points_file.createNewFile();
+				StringBuilder cmd = new StringBuilder();
+				for (char c: vars.input_1.inbuf)
+				{
+					if(c == 0)
+						break;
+					cmd.append(c);
+				}
+				
+				
+				
+				BufferedWriter writer = new BufferedWriter(new FileWriter(points_file, true));
+				writer.write("\"" + cmd.toString() + "\", "+ vars.play_1.here + ", " + n + "\n");
+				writer.close();
+			}
+			catch(Exception e)
+			{
+				e.printStackTrace();
+			}
+		}
+		
 		if (vars.findex_1.endgmf)
 		{
 			vars.state_1.egscor += n;

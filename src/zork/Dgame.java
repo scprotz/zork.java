@@ -100,7 +100,7 @@ public class Dgame
 			switch (GOTO)
 			{
 				case 100:
-
+					System.err.println("Room: " + vars.play_1.here);
 					vars.play_1.winner = vars.aindex_1.player;
 					/* !PLAYER MOVING. */
 					vars.play_1.telflg = false;
@@ -168,7 +168,7 @@ public class Dgame
 						GOTO = 1000;
 						continue;
 					}
-//		    f = 
+
 					dsub.rappli_(vars.rooms_1.ractio[vars.play_1.here - 1]);
 
 				case 400:

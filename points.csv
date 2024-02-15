@@ -1,0 +1,9 @@
+"GET EGG ", 147, 5
+"W ", 6, 10
+"D ", 9, 25
+"GET PAINTING ", 105, 4
+"(Case)PUT PAINTING IN CASE ", 8, 0,7
+"(Case)GET SWORD", 8, 0,7
+"(Case)GET LAMP", 8, 0,7
+"GET BAG", 16, 10
+"(Case)PUT COINS IN CASE", 8, 0,12

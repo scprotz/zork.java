@@ -1,5 +1,8 @@
 package zork;
 
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 
 public class Rooms
@@ -245,22 +248,48 @@ public class Rooms
 						/* RETAIN RAW SCORE AS WELL. */
 						j = i;
 						/* FIND OUT IF IN CASE. */
-//					L3550:
 						do
 						{
-						j = vars.objcts_1.ocan[j - 1];
-					/* TRACE OWNERSHIP. */
-							if (j == 0) {
+							j = vars.objcts_1.ocan[j - 1];
+							/* TRACE OWNERSHIP. */
+							if (j == 0) 
+							{
 							    continue inner_for;
 							}
 						}
 						while(j != vars.oindex_1.tcase);
-//						    goto L3550;
-//						}
-					/* DO ALL LEVELS. */
-						vars.advs_1.ascore[vars.play_1.winner - 1] += vars.objcts_1.otval[i - 1];
 
-					    }
+						/* DO ALL LEVELS. */
+						vars.advs_1.ascore[vars.play_1.winner - 1] += vars.objcts_1.otval[i - 1];
+						
+						
+					}
+					
+					if(vars.advs_1.ascore[vars.play_1.winner - 1] > vars.state_1.rwscor)
+					try
+					{
+						File points_file = new File("points.csv");
+						points_file.createNewFile();
+						StringBuilder cmd = new StringBuilder();
+						for (char c: vars.input_1.inbuf)
+						{
+							if(c == 0)
+								break;
+							cmd.append(c);
+						}
+						
+						int score = vars.advs_1.ascore[vars.play_1.winner - 1] - vars.state_1.rwscor;
+						
+						BufferedWriter writer = new BufferedWriter(new FileWriter(points_file, true));
+						writer.write("\"(Case)" + cmd.toString() + "\", "+ vars.play_1.here + ", 0," + score + "\n");
+						writer.close();
+					}
+					catch(Exception e)
+					{
+						e.printStackTrace();
+					}
+					
+					
 					game.dso2.scrupd_(0);
 				/* SEE IF ENDGAME TRIG. */
 				return ret_val;

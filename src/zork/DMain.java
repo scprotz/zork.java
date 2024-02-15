@@ -21,6 +21,11 @@ public class DMain
 		/* 1) INITIALIZE DATA STRUCTURES */
 		/* 2) PLAY GAME */
 		Vars vars = new Vars();
+		
+	    File points_file = new File("points.csv");
+	    points_file.delete();
+
+		
 		DInit init = new DInit(vars);
 		Dgame game = new Dgame(vars, init);
 
@@ -60,7 +65,11 @@ public class DMain
 					while ((buf = words_file.readLine()) != null)
 					{
 						if (buf.length() != 0 && buf.charAt(0) != '#')
-						{							
+						{				
+							if(buf.indexOf('#') != -1)
+							{					
+								buf = buf.substring(0, buf.indexOf('#'));								
+							}
 							words.add(buf);
 						}
 					}
@@ -79,6 +88,15 @@ public class DMain
 			
 			word = moves[word_index];
 			System.err.println(word);
+			try
+			{
+				Thread.sleep(1);
+			}
+			catch (InterruptedException e)
+			{
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			word_index++;
 		}
 		else
@@ -86,6 +104,7 @@ public class DMain
 			while (word.length() == 0)
 				word = reader.readLine();
 		}
+		
 		return word;
 	}		 
 }
