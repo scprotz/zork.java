@@ -7,3 +7,8 @@
 "(Case)GET LAMP", 8, 0,7
 "GET BAG", 16, 10
 "(Case)PUT COINS IN CASE", 8, 0,12
+"(Case)GET LAMP", 8, 0,12
+"N ", 1, 5
+"GET TRUNK", 40, 15
+"TAKE TORCH", 80, 14
+"(Case)PUT TRUNK IN CASE", 8, 0,20

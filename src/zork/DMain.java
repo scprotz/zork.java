@@ -64,6 +64,7 @@ public class DMain
 					String buf = "";
 					while ((buf = words_file.readLine()) != null)
 					{
+						buf = buf.trim();
 						if (buf.length() != 0 && buf.charAt(0) != '#')
 						{				
 							if(buf.indexOf('#') != -1)
