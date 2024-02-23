@@ -173,7 +173,7 @@ public class Rooms
 						return ret_val;
 					}
 					/* !LOOK? */
-					i = 13;
+					i = 13; 
 					/* !ASSUME CLOSED. */
 					if ((vars.objcts_1.oflag2[vars.oindex_1.windo - 1] & Vars.OPENBT) != 0)
 					{

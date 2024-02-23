@@ -1,0 +1,132 @@
+
+
+Notes:  Lamp seems to have 462 steps of life, use sparingly when possible		
+		
+		Cardinal actions: 	n, s, e, w, u, d, ne, nw, se, sw, 
+							
+		Common actions: 	get, put <xxx> in case, drop <xxx>, light <xxx>, 
+							extinguish <xxx>, open <xxx>, board <xxx>
+							disembark <xxx>, launch, eat <xxx>
+							look (for padding moves for rng)
+							(score is not mandatory)
+		
+		One-time actions: 	open window
+							move rug
+							unlock grate with keys
+							turn bolt with wrench
+							push yellow button
+							turn bolt with wrench
+							well (solve riddle)
+							throw red cake at pool
+							pour water in bucket
+							tell robot, e
+							tell robot, s
+							tell robot, lift cage
+							tell robot, push triangle button
+							put water in bottle
+							odysseus
+							exorcise
+							wind canary
+							inflate boat with pump
+							put stick in boat
+							pray
+							
+		Multiple (unique):
+							kill troll with sword							
+							walk through curtain
+							walk through south wall
+							walk through north wall
+							kill thief with knife
+							echo
+							light candle with match							
+							rub mirror
+							dig with shovel
+							wave stick
+							
+							
+		
+		These actions are cardinal because they are the only way to score points
+		(technically not all direction moves score points but navigate between locations
+		required to get points)
+		
+		Objects:  	pts: egg, painting, keys, coins, trunk, torch, necklace,
+						spices, sphere, violin, portrait, bills, chalice, canary,
+						grail, bar, trident, bauble, emerald, statue, pot, coffin
+					
+					no pts: window, trap door, lamp, sword, grate, sack, garlic
+							wrench, screwdriver, bottle, eatme cake, orange cake
+							blue cake, red cake, box, knife, bell, book, candles, 
+							match, pump, stick, buoy, shovel, wire
+							
+					
+					vehicle: bucket						
+		
+Tasks: 
+
+1: Get egg (5 pts)
+	start: 2
+	end: 2
+	actions:	
+
+2: Enter Kitchen (10 pts)	
+	start: 2
+	end: room 6	
+	actions: open window (5)
+	
+3: Enter Cellar (15 pts)
+	start: 8
+	end: 9
+	actions:	
+	
+4: Drop Egg (0 pts)
+	prereq: egg
+	start: 8
+	end: 8
+	actions: move rug, open trapdoor, d, drop egg, u
+		
+5: Get Painting (4 pts)
+	prereq: lamp
+	start: 8
+	end: 105
+	actions: get painting
+		
+6: Stash Painting (7 pts)
+	prereq: lamp, painting
+	start: 105
+	end: 8
+	actions:
+	
+7: Kill Troll (5 pts)
+	prereq: lamp, sword
+	start: 8
+	end: 8
+	actions:
+	
+8: Get Coins and Keys (10 pts)
+	prereq: lamp, troll dead
+	start: 8
+	end: 25
+	actions:
+	
+9: Stash Coins (5 pts)
+	prereq: lamp, keys, coins
+	start: 25
+	end: 8
+	actions:
+	
+10: Get Bills and Portrait (20 pts)
+	prereq: lamp
+	start: 8
+	end: 152
+	actions:
+	
+11: Stash Bills and Portrait (20  pts)
+	prereq: lamp, bills, portrait
+	start: 152
+	end: 8
+	
+12: 
+	
+		
+
+	
