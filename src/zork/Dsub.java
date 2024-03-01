@@ -23,21 +23,45 @@ public class Dsub
 	/* RESIDENT SUBROUTINES FOR DUNGEON */
 
 	/* RSPEAK-- OUTPUT RANDOM MESSAGE ROUTINE */
-	public void rspeak_(int n) throws IOException
+	public void rspeak_(int n) 
 	{
-		rspsb2nl_(n, 0, 0, 1);
+		try
+		{
+			rspsb2nl_(n, 0, 0, 1);
+		}
+		catch (IOException e)
+		{
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	} /* rspeak_ */
 
 	/* RSPSUB-- OUTPUT RANDOM MESSAGE WITH SUBSTITUTABLE ARGUMENT */
-	void rspsub_(int n, int s1) throws IOException
+	void rspsub_(int n, int s1) 
 	{
-		rspsb2nl_(n, s1, 0, 1);
+		try
+		{
+			rspsb2nl_(n, s1, 0, 1);
+		}
+		catch (IOException e)
+		{
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	} /* rspsub_ */
 
 	/* RSPSB2-- OUTPUT RANDOM MESSAGE WITH UP TO TWO SUBSTITUTABLE ARGUMENTS */
-	void rspsb2_(int n, int s1, int s2) throws IOException
+	void rspsb2_(int n, int s1, int s2) 
 	{
-		rspsb2nl_(n, s1, s2, 1);
+		try
+		{
+			rspsb2nl_(n, s1, s2, 1);
+		}
+		catch (IOException e)
+		{
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	} /* rspsb2_ */
 
 	/* rspsb2nl_ Display a substitutable message with an optional newline */
@@ -75,14 +99,11 @@ public class Dsub
 //	#ifdef DEBUG
 			if (res == EOF)
 			{
-				System.err.println("Error seeking database loc " + x);
+				Supp.errln("Error seeking database loc " + x);
 				Supp.exit_();
 			}
 //	#endif
 		}
-
-		if (nl != 0)
-			Supp.more_output(null);
 
 		while (true)
 		{
@@ -95,7 +116,7 @@ public class Dsub
 			{
 				if (i == EOF)
 				{
-					System.err.println("Error reading database loc " + x);
+					Supp.errln("Error reading database loc " + x);
 					Supp.exit_();
 				}
 //	#endif
@@ -108,10 +129,9 @@ public class Dsub
 				break;
 			else if (i == '\n')
 			{
-				System.out.println();
+				Supp.println("");
 //	         putchar('\n');
-				if (nl != 0)
-					Supp.more_output(null);
+
 			}
 			else if (i == '#' && y != 0)
 			{
@@ -135,7 +155,7 @@ public class Dsub
 				{
 					if (res == EOF)
 					{
-						System.err.println("Error seeking database loc " + iloc);
+						Supp.errln("Error seeking database loc " + iloc);
 						Supp.exit_();
 					}
 //	#endif
@@ -144,12 +164,12 @@ public class Dsub
 				z = 0;
 			}
 			else
-				System.out.print((char) i);
+				Supp.print(""+(char) i);
 //	         putchar(i);
 		}
 
 		if (nl != 0)
-			System.out.print("\n");
+			Supp.print("\n");
 //	      putchar('\n');
 	}
 
@@ -157,7 +177,7 @@ public class Dsub
 
 	/* DECLARATIONS */
 
-	boolean objact_() throws IOException
+	boolean objact_() 
 	{
 		/* !ASSUME WINS. */
 		if (vars.prsvec_1.prsi != 0
@@ -184,7 +204,7 @@ public class Dsub
 
 	/* CALL BUG(NO,PAR) */
 
-	void bug_(int a, int b) throws IOException
+	void bug_(int a, int b) 
 	{
 //	#ifdef DEBUG
 		if (Vars.DEBUG)
@@ -192,8 +212,7 @@ public class Dsub
 
 			/* Local variables */
 
-			Supp.more_output(null);
-			System.out.println("PROGRAM ERROR " + a + ", PARAMETER=" + b);
+			Supp.println("PROGRAM ERROR " + a + ", PARAMETER=" + b);
 
 			if (vars.debug_1.dbgflg != 0)
 			{
@@ -211,7 +230,7 @@ public class Dsub
 
 	/* CALL NEWSTA(OBJECT,STRING,NEWROOM,NEWCON,NEWADV) */
 
-	void newsta_(int o, int r, int rm, int cn, int ad) throws IOException
+	void newsta_(int o, int r, int rm, int cn, int ad) 
 	{
 		rspeak_(r);
 		vars.objcts_1.oroom[o - 1] = rm;
@@ -271,7 +290,7 @@ public class Dsub
 	/* DECLARATIONS */
 	static final int rlist[] = new int[] { 8, 6, 36, 35, 34, 4, 34, 6, 5 };
 
-	void jigsup_(int desc) throws IOException
+	void jigsup_(int desc) 
 	{
 		/* Initialized data */
 
@@ -425,7 +444,7 @@ public class Dsub
 
 	/* DECLARATIONS */
 
-	int oactor_(int obj) throws IOException
+	int oactor_(int obj) 
 	{
 		/* System generated locals */
 
@@ -480,7 +499,7 @@ public class Dsub
 	/* RMDESC PRINTS A DESCRIPTION OF THE CURRENT ROOM. */
 	/* IT IS ALSO THE PROCESSOR FOR VERBS 'LOOK' AND 'EXAMINE'. */
 
-	boolean rmdesc_(int full) throws IOException
+	boolean rmdesc_(int full) 
 	{
 		/* System generated locals */
 		boolean ret_val, L__1;
@@ -620,7 +639,7 @@ public class Dsub
 	} /* rmdesc_ */
 
 	/* RAPPLI- ROUTING ROUTINE FOR ROOM APPLICABLES */
-	boolean rappli_(int ri) throws IOException
+	boolean rappli_(int ri) 
 	{
 		/* Initialized data */
 

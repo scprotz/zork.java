@@ -18,7 +18,7 @@ public class Dso3
 		this.game = game;
 	}
 
-	boolean findxt_(int dir, int rm) throws IOException
+	boolean findxt_(int dir, int rm) 
 	{
 		/* System generated locals */
 		boolean ret_val;
@@ -148,16 +148,14 @@ public class Dso3
 
 	/* YESNO- OBTAIN YES/NO ANSWER */
 	/* YES-IS-TRUE=YESNO(QUESTION,YES-STRING,NO-STRING) */
-	boolean yesno_(int q, int y, int n) throws IOException
+	boolean yesno_(int q, int y, int n) 
 	{
 		/* Local variables */
 		do
 		{
 			game.dsub.rspeak_(q);
 			/* !ASK */
-			System.out.flush();
 			String ans = DMain.getInput();
-			Supp.more_input();
 			/* !GET ANSWER */
 			if (ans.length() > 0 && (ans.charAt(0) == 'Y' || ans.charAt(0) == 'y'))
 			{

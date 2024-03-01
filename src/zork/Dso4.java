@@ -18,7 +18,7 @@ public class Dso4
 		this.game = game;
 	}
 
-	int robadv_(int adv, int nr, int nc, int na) throws IOException
+	int robadv_(int adv, int nr, int nc, int na) 
 	{
 		/* System generated locals */
 		int ret_val;
@@ -43,7 +43,7 @@ public class Dso4
 	} /* robadv_ */
 
 	/* ROBRM-- STEAL ROOM VALUABLES */
-	int robrm_(int rm, int pr, int nr, int nc, int na) throws IOException
+	int robrm_(int rm, int pr, int nr, int nc, int na) 
 	{
 		/* System generated locals */
 		int ret_val;

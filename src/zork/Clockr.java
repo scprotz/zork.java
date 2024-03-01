@@ -22,7 +22,7 @@ public class Clockr
 	static final int cndtck[] = new int[] { 50, 20, 10, 5, 0, 156, 156, 156, 157, 0 };
 	static final int lmptck[] = new int[] { 50, 30, 20, 10, 4, 0, 154, 154, 154, 154, 155, 0 };
 
-	void cevapp_(int ri) throws IOException
+	void cevapp_(int ri) 
 	{
 		/* Initialized data */
 
@@ -932,7 +932,7 @@ public class Clockr
 
 	/* LITINT- LIGHT INTERRUPT PROCESSOR */
 	private void litint_(int obj, int ctr[], int cev, final int ticks[], int tickln)
-			throws IOException
+			
 	{
 		// TODO: Light seems to be dim - need to fix?? //
 		/* Parameter adjustments */

@@ -31,7 +31,7 @@ public class Dso5
 	} /* gttime_ */
 
 	/* OPNCLS-- PROCESS OPEN/CLOSE FOR DOORS */
-	boolean opncls_(int obj, int so, int sc) throws IOException
+	boolean opncls_(int obj, int so, int sc) 
 	{
 		/* System generated locals */
 		boolean ret_val;

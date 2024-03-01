@@ -28,7 +28,7 @@ public class Sverbs
 		this.verbs = verbs;
 	}
 
-	boolean sverbs_(int ri) throws IOException
+	boolean sverbs_(int ri) 
 	{
 		/* Initialized data */
 
@@ -303,8 +303,7 @@ public class Sverbs
 				/* V74-- VERSION. PRINT INFO. */
 
 				case 5000:
-					Supp.more_output(null);
-					System.out.printf("V%1d.%1d%c\n", vars.vers_1.vmaj, vars.vers_1.vmin,
+					Supp.printf("V%1d.%1d%c\n", vars.vers_1.vmaj, vars.vers_1.vmin,
 							vars.vers_1.vedit);
 					vars.play_1.telflg = true;
 					return ret_val;
@@ -671,19 +670,18 @@ public class Sverbs
 					i = k[0] / 60;
 					j = k[0] % 60;
 
-					Supp.more_output(null);
-					System.out.printf("You have been playing Dungeon for ");
+					Supp.printf("You have been playing Dungeon for ");
 					if (i >= 1)
 					{
-						System.out.printf("%d hour", i);
+						Supp.printf("%d hour", i);
 						if (i >= 2)
-							System.out.printf("s");
-						System.out.printf(" and ");
+							Supp.printf("s");
+						Supp.printf(" and ");
 					}
-					System.out.printf("%d minute", j);
+					Supp.printf("%d minute", j);
 					if (j != 1)
-						System.out.printf("s");
-					System.out.printf(".\n");
+						Supp.printf("s");
+					Supp.printf(".\n");
 					vars.play_1.telflg = true;
 					return ret_val;
 
@@ -822,8 +820,7 @@ public class Sverbs
 
 					if (j != 0)
 					{
-						Supp.more_output(null);
-						System.out.printf("You will be cured after %d moves.\n", i);
+						Supp.printf("You will be cured after %d moves.\n", i);
 					}
 
 					i__1 = k[0] + 478;
@@ -931,8 +928,7 @@ public class Sverbs
 					vars.findex_1.spellf = true;
 					/* !TELL HIM. */
 					vars.play_1.telflg = true;
-					Supp.more_output(null);
-					System.out.printf("A hollow voice replies:  \"%.6s %.6s\".\n", pp1, ch);
+					Supp.printf("A hollow voice replies:  \"%.6s %.6s\".\n", pp1, ch);
 
 					return ret_val;
 
@@ -1001,7 +997,7 @@ public class Sverbs
 					      String user_answer = new String(vars.input_1.inbuf);
 //					      char[] z2 = vars.input_1.inbuf + vars.prsvec_1.prscon - 1;
 					      String zz2 = user_answer.substring(ans_index).trim();
-					      System.out.println(zz2);
+					      Supp.println(zz2);
 					      
 					      int zindex = 0;
 					      int z2index = 0;

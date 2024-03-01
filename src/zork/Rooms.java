@@ -21,7 +21,7 @@ public class Rooms
 		this.game = game;
 	}
 
-	boolean rappl1_(int ri) throws IOException
+	boolean rappl1_(int ri) 
 	{
 		/* System generated locals */
 		int i__1, i__2;

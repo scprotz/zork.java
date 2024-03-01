@@ -19,7 +19,7 @@ public class Dverb1 {
 	}
 
 	/* TAKE AN OBJECT (FOR VERBS TAKE, PUT, DROP, READ, ETC.) */
-	boolean take_(boolean flg) throws IOException {
+	boolean take_(boolean flg)  {
 		/* System generated locals */
 		int i__1;
 		boolean ret_val;
@@ -113,7 +113,7 @@ public class Dverb1 {
 
 	/* DECLARATIONS */
 
-	boolean drop_(boolean z) throws IOException {
+	boolean drop_(boolean z)  {
 		int GOTO = 200;
 
 		/* System generated locals */
@@ -212,7 +212,7 @@ public class Dverb1 {
 	} /* drop_ */
 
 	/* PUT- PUT VERB PROCESSOR */
-	boolean put_(boolean flg) throws IOException {
+	boolean put_(boolean flg)  {
 		/* System generated locals */
 		boolean ret_val;
 
@@ -370,7 +370,7 @@ public class Dverb1 {
 
 	/* VALUAC- HANDLES VALUABLES/EVERYTHING */
 
-	void valuac_(int v) throws IOException {
+	void valuac_(int v)  {
 		/* Local variables */
 		boolean f;
 		int i;

@@ -20,7 +20,7 @@ public class Sobjs
 		this.game = game;
 	}
 
-	boolean sobjs_(int ri, int arg) throws IOException
+	boolean sobjs_(int ri, int arg) 
 	{
 		/* System generated locals */
 		int i__1;

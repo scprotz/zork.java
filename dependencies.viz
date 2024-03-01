@@ -1,0 +1,28 @@
+digraph G 
+{
+	"Get Egg\n(Room 147)\n5pts"
+	"Enter Kitchen\n(Room 6)\n10 pts"
+	"Enter Cellar\n(Room 9)\n25 pts"
+	"Get Painting\n(Room 105)\n4 pts"
+	"Stash Painting\n(Room 8)\n7 pts"
+	"Enter East-West Passage\n(Room 1)\n5 pts"
+	"Get Coins\n(Room 16)\n10 pts"
+	"Stash Coins\n(Room 8)\n5 pts"
+	"Get Portrait\n(Room 156)\n10 pts"
+	"Stash Portrait\n(Room 8)\n5pts"
+	"Get Bills\n(Room 154)\n10 pts"
+	"Stash Bills\n(Room 8)\n15 pts"
+	"Get Torch\n(Room 80)\n14 pts"
+	"Get Trunk\n(Room 40)\n15 pts"
+	"Enter Treasure Room \n(Room 103)\n25 pts"
+	"Get Chalice\n(Room 103)\n10 pts"
+	"Stash Chalice\n(Room 8)\n10 pts"
+	"Get Grail\n(Room 95)\n2 pts"
+	"Stash Grail\n(Room 8)\n5 pts"
+	"Get Trident\n(Room 47)\n4 pts"
+	"Stash Trident\n(Room 8)\n11 pts"
+	
+	
+	
+	 
+}

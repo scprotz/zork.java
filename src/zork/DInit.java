@@ -95,8 +95,6 @@ public class DInit
 		RandomAccessFile indxfile;
 		int mmax, omax, rmax, vmax, amax, cmax;
 
-		Supp.more_init();
-
 		/* NOW START INITIALIZATION PROPER */
 
 		ret_val = false;
@@ -386,10 +384,9 @@ public class DInit
 	{
 		if (Vars.DEBUG)
 		{
-			Supp.more_output(null);
-			System.out.println(LOCALTEXTFILE + " is version " + i + "." + j + "" + (char) k + ".");
-			Supp.more_output(null);
-			System.out.println("I require version " + vars.vers_1.vmaj + "." + vars.vers_1.vmin
+
+			Supp.println(LOCALTEXTFILE + " is version " + i + "." + j + "" + (char) k + ".");
+			Supp.println("I require version " + vars.vers_1.vmaj + "." + vars.vers_1.vmin
 					+ (char) vars.vers_1.vedit + ".");
 			error1975();
 		}
@@ -399,8 +396,8 @@ public class DInit
 	{
 		if (Vars.DEBUG)
 		{
-			Supp.more_output(null);
-			System.out.println("I can't open " + LOCALTEXTFILE + ".");
+			Supp.println(null);
+			Supp.println("I can't open " + LOCALTEXTFILE + ".");
 		}
 		error1975();
 	}
@@ -409,17 +406,17 @@ public class DInit
 	{
 		if (Vars.DEBUG)
 		{
-			Supp.more_output("Suddenly a sinister, wraithlike figure appears before you,");
-			Supp.more_output("seeming to float in the air.  In a low, sorrowful voice he says,");
-			Supp.more_output("\"Alas, the very nature of the world has changed, and the dungeon");
-			Supp.more_output(
+			Supp.println("Suddenly a sinister, wraithlike figure appears before you,");
+			Supp.println("seeming to float in the air.  In a low, sorrowful voice he says,");
+			Supp.println("\"Alas, the very nature of the world has changed, and the dungeon");
+			Supp.println(
 					"cannot be found.  All must now pass away.\"  Raising his oaken staff");
-			Supp.more_output("in farewell, he fades into the spreading darkness.  In his place");
-			Supp.more_output("appears a tastefully lettered sign reading:");
-			Supp.more_output("");
-			Supp.more_output("                       INITIALIZATION FAILURE");
-			Supp.more_output("");
-			Supp.more_output("The darkness becomes all encompassing, and your vision fails.");
+			Supp.println("in farewell, he fades into the spreading darkness.  In his place");
+			Supp.println("appears a tastefully lettered sign reading:");
+			Supp.println("");
+			Supp.println("                       INITIALIZATION FAILURE");
+			Supp.println("");
+			Supp.println("The darkness becomes all encompassing, and your vision fails.");
 		}
 	}
 

@@ -18,7 +18,7 @@ public class Lightp
 		this.game = game;
 	}
 
-	boolean lightp_(int obj) throws IOException
+	boolean lightp_(int obj) 
 	{
 		/* System generated locals */
 		boolean ret_val;

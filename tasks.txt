@@ -1,0 +1,82 @@
+get egg
+stash egg
+get painting
+stash painting
+get coins
+stash coins
+get portrait
+stash portrait
+get bills
+stash bills
+get torch
+stash torch
+get trunk
+stash trunk
+get chalice
+stash chalice
+get grail
+stash grail
+get trident
+stash trident
+get figurine
+stash figurine
+get bracelet
+stash bracelet
+get necklace
+stash necklace
+get spices
+stash spices
+get sphere
+stash sphere
+get violin
+stash violin
+get coffin
+stash coffin
+get bar
+stash bar
+get emerald
+stash emerald
+get statue
+stash statue
+get pot
+stash pot
+get canary
+stash canary
+get bauble
+stash bauble
+get coal
+get diamond
+stash diamond
+get ruby
+stash ruby
+get coin
+stash coin
+get stamp
+stash stamp
+get crown
+stash crown
+unlock gate with keys
+
+
+non-points
+kill troll
+kill thief
+scare cyclops
+return to library
+get water
+get wire
+get rope
+get pump
+get stick
+open window
+drop egg in cellar
+get lamp
+get sword
+get knife
+get keys
+get garlic
+move rug
+open trap door
+get wrench
+get screwdriver
+

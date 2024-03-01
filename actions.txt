@@ -1,0 +1,747 @@
+get egg
+open window
+drop all
+open case
+get lamp
+move rug
+open trap door
+
+d
+drop egg
+light lamp
+s
+s
+get painting					
+extinguish lamp
+s
+u
+w
+put painting in case			
+drop all
+
+
+
+
+
+
+
+
+
+
+get lamp
+get sword
+open trap door
+d
+light lamp
+e
+kill troll with sword			
+kill troll with sword			
+drop sword
+w
+s
+s
+extinguish lamp
+s
+u
+w
+drop all
+
+
+
+
+
+
+
+
+
+
+
+get lamp
+open trap door
+d
+light lamp
+e
+s
+e
+w
+s
+get keys
+get coins
+w
+n
+e
+ne
+unlock grate with keys			
+drop keys						
+open grate
+extinguish lamp
+u
+w
+w
+e
+w
+w
+put coins in case				
+drop all
+
+
+
+
+
+
+
+
+get lamp
+e
+get all
+u
+light lamp
+get all
+extinguish lamp
+d
+w
+open sack
+
+get garlic
+drop all
+
+
+
+
+
+
+
+
+
+
+get lamp
+get rope
+open trap door
+d
+light lamp
+e
+n
+e
+
+l
+l
+l
+l
+l
+
+e
+
+
+
+
+
+
+
+
+
+
+e
+n
+n
+get wrench
+get screwdriver
+push yellow button
+s
+s
+turn bolt with wrench
+drop wrench
+s
+nw
+n
+get trunk
+s
+s
+w
+e
+tie rope to railing
+d
+extinguish lamp
+get torch
+d
+e
+w
+u
+put trunk in case					
+extinguish torch
+drop all
+
+
+
+
+
+
+
+
+
+
+
+get lamp
+get bottle
+d
+light lamp
+e
+n
+e
+l
+e
+e
+well
+e
+get necklace 						
+e
+board bucket
+open bottle
+pour water in bucket 				
+disembark bucket
+e
+get all
+drop orange cake
+eat eatme cake
+e
+throw red cake at pool
+get spices 							
+w
+eat blue cake
+nw
+tell robot, e
+e
+tell robot, push triangle button
+tell robot, s
+s
+get sphere
+tell robot, lift cage
+get sphere
+n
+w
+s
+w
+board bucket
+put water in bottle
+disembark bucket
+drop bottle
+w
+w
+d
+n
+open box
+get violin							
+w
+w
+w
+u
+put spices in case					
+put necklace in case				
+put sphere in case					
+put violin in case					
+extinguish lamp
+drop all
+
+
+
+
+
+
+
+
+
+
+get lamp
+open trap door
+d
+light lamp
+s
+s
+w
+ne
+e
+s
+get portrait 					
+n
+walk through curtain
+walk through south wall
+walk through curtain
+get bills 						
+walk through north wall
+drop bills
+drop portrait
+e
+e
+get bills
+get portrait
+walk through curtain
+s
+s
+s
+n
+e
+w
+extinguish lamp
+u
+put portrait in case 			
+put bills in case				
+drop all
+
+
+
+
+
+
+
+
+
+get lamp
+get knife
+open trap door
+d
+light lamp
+e
+s
+s
+e
+e
+w
+e
+s
+e
+odysseus
+u
+kill thief with knife
+kill thief with knife
+kill thief with knife
+get chalice						
+get egg						
+get canary						
+d
+n
+e
+turn lamp off
+put egg in case					
+put chalice in case				
+drop all
+score 							
+
+
+
+
+
+
+
+
+
+get lamp
+open trap door
+d
+light lamp
+e
+n
+e
+e
+get grail						
+n
+extinguish lamp
+get bell
+e
+get book						
+get candles
+w
+w
+w
+ne
+ne
+echo
+get bar							
+n
+e
+n
+get all
+s
+s
+s
+se
+e
+e
+e
+light match
+light candles with match
+exorcise
+e
+w
+u
+w
+rub mirror
+e
+e
+get trident						
+se
+get pump
+n
+w
+n
+w
+w
+d
+extinguish candles
+u
+put trident in case 			
+put grail in case				
+put bar in case					
+drop all
+
+
+
+
+
+
+
+
+get canary
+e
+e
+n
+n
+wind canary
+get bauble						
+w
+e
+w
+w
+put canary in case				
+put bauble in case				
+
+
+
+
+
+
+
+
+
+get lamp
+get pump
+open trap door
+d
+light lamp
+e
+n
+e
+nw
+e
+d
+inflate boat with pump
+drop pump
+put stick in boat
+board boat
+launch
+d
+d
+w
+disembark boat
+w
+get shovel
+s
+board boat
+launch
+d
+get buoy
+w
+disembark boat
+get stick
+open buoy
+get emerald						
+drop buoy
+dig with shovel
+dig with shovel
+dig with shovel
+dig with shovel
+drop shovel
+get statue						
+s
+s
+wave stick
+drop stick
+e
+extinguish lamp
+e
+get pot							
+se
+e
+u
+s
+w
+n
+e
+w
+w
+put statue in case				
+put emerald in case				
+put pot in case					
+drop all
+
+
+
+
+
+get lamp
+d
+light lamp
+e
+n
+n
+w
+nw
+get coffin					
+u
+n
+get wire
+e
+n
+n
+n
+u
+n
+rub mirror
+n
+n
+u
+e
+pray
+extinguish lamp
+e
+w
+e
+w
+w
+put coffin in case			
+drop wire
+
+
+
+
+
+
+get lamp
+get garlic
+open trap door
+d
+light lamp
+e
+n
+n
+d
+n
+n
+n
+n
+n
+w
+w
+n
+nw
+w
+drop garlic
+get figurine						
+e
+s
+n
+n
+w
+d
+get bracelet						
+n
+n
+s
+w
+s
+d
+extinguish lamp
+put bracelet in case				
+put figurine in case				
+drop all
+
+
+
+
+
+
+get lamp
+get torch
+get screwdriver
+d
+light lamp
+e
+n
+n
+d
+n
+n
+n
+u
+n
+w
+w
+n
+n
+put screwdriver in basket
+n
+ne
+n
+ne
+nw
+d
+d
+ne
+get coal
+s
+u
+u
+e
+e
+s
+put coal in basket
+put lamp in basket
+light torch
+lower basket
+n
+ne
+n
+ne
+nw
+d
+d
+s
+drop all
+sw
+get lamp
+get screwdriver
+get coal
+e
+open lid
+put coal in lid
+close lid
+turn switch with screwdriver
+open lid
+get diamond
+drop screwdriver
+w
+put diamond in basket
+put lamp in basket
+n
+get torch
+n
+u
+u
+e
+e
+s
+raise basket
+get lamp
+extinguish lamp
+get diamond							
+w
+s
+d
+extinguish torch
+u
+put diamond in case					
+drop all	
+score								
+
+
+
+
+get lamp
+get torch
+w
+light lamp
+push east wall
+push south wall
+push south wall
+push south wall
+push south wall
+push south wall
+get card
+push south wall
+
+push east wall
+s
+push west wall
+push south wall
+push west wall
+push south wall
+push south wall
+push west wall
+push north wall
+push west wall
+push north wall
+push north wall
+extinguish lamp
+put card in case
+drop all
+
+
+get torch
+get lamp
+get brick
+get wire
+get match
+get guidebook
+light torch
+throw torch at glacier
+light lamp
+get ruby
+open receptacle
+put book in receptacle
+light match
+light book with match
+board basket
+wait
+wait
+land
+disembark basket
+tie rope to hook
+get coin
+open purple book
+get stamp
+
+untie rope
+board basket
+wait
+wait
+wait
+land
+disembark basket
+tie rope to hook
+put brick in hole
+put wire in brick
+light match
+light wire with match
+
+get crown
+board basket
+untie rope
+close receptacle
+wait
+wait
+wait
+wait
+wait
+
+disembark basket
+get torch
+light torch
+s
+w
+extinguish lamp
+put crown in case
+put coin in case
+put ruby in case
+put stamp in case
+put torch in case
+close case
+drop match
+

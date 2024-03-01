@@ -21,7 +21,7 @@ public class Np1
 		this.game = game;
 	}
 	
-	int sparse_(int[] lbuf, int[] llnt, boolean vbflag) throws IOException
+	int sparse_(int[] lbuf, int[] llnt, boolean vbflag) 
 	{
 		/* Initialized data */
 

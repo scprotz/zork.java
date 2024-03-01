@@ -18,7 +18,7 @@ public class NRooms
 		this.game = game;
 	}
 
-	boolean rappl2_(int ri) throws IOException
+	boolean rappl2_(int ri) 
 	{
 	    /* Initialized data */
 
@@ -426,7 +426,7 @@ public class NRooms
 
 	/* DECLARATIONS */
 
-	private void lookto_(int nrm, int srm, int nt, int st, int ht) throws IOException
+	private void lookto_(int nrm, int srm, int nt, int st, int ht) 
 	{
 	    /* System generated locals */
 	    int i__1;

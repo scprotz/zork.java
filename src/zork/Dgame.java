@@ -1,6 +1,5 @@
 package zork;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Iterator;
@@ -43,9 +42,9 @@ public class Dgame
 
 	Rooms rooms = null;
 	NRooms nrooms = null;
+	
+	boolean turn_ended = false;
 
-	/** Dsub needs this to initialize **/
-	// TODO: Should refactor the requiring functions **/
 
 	public Dgame(Vars vars, DInit init)
 	{
@@ -79,53 +78,47 @@ public class Dgame
 		this.actors = new Actors(vars, this);
 	}
 
-	public void game_() throws IOException
-	{
-		/* Local variables */
-		int i;
+	public void game_()
+	{		
 
-		/* START UP, DESCRIBE CURRENT LOCATION. */
-
+		/* WELCOME ABOARD. */
 		dsub.rspeak_(1);
-		/* !WELCOME ABOARD. */
 
+		/* START GAME. */
 		dsub.rmdesc_(3);
-		/* !START GAME. */
+		
+	}
+	
+	
+	public void do_cmd_(String action)
+	{
+		action = action.trim().toUpperCase();
+		for(int index = 0; index < action.length(); index++)
+			vars.input_1.inbuf[index] = action.charAt(index);
+		vars.input_1.inbuf[action.length()] = '\0';			
 
 		/* NOW LOOP, READING AND EXECUTING COMMANDS. */
+	
+		this.turn_ended = false;
 
 		int GOTO = 100;
-		do
+		if (!vars.findex_1.echof && vars.play_1.here == vars.rindex_1.echor)
+		{
+			GOTO = 1000;		
+		}
+		
+		while(! turn_ended)
 		{
 			switch (GOTO)
 			{
 				case 100:
-					System.err.println("Room: " + vars.play_1.here);
 					vars.play_1.winner = vars.aindex_1.player;
 					/* !PLAYER MOVING. */
 					vars.play_1.telflg = false;
 					/* !ASSUME NOTHING TOLD. */
 					if (vars.prsvec_1.prscon <= 1)
 					{
-						np.rdline_(vars.input_1.inbuf, 1);
 					}
-
-					if (Vars.ALLOW_GDT)
-					{
-						String str = new String(vars.input_1.inbuf);
-						str = str.substring(vars.prsvec_1.prscon - 1);
-						if (str.startsWith("GDT"))
-						{
-							/* !CALL ON GDT? */
-							gdt.gdt_();
-							/* !YES, INVOKE. */
-							GOTO = 100;
-							continue;
-							/* !ONWARD. */
-						}
-
-					} /* ALLOW_GDT */
-
 					++vars.state_1.moves;
 					vars.prsvec_1.prswon = np.parse_(vars.input_1.inbuf, true);
 					if (!vars.prsvec_1.prswon)
@@ -165,6 +158,7 @@ public class Dgame
 				case 350:
 					if (!vars.findex_1.echof && vars.play_1.here == vars.rindex_1.echor)
 					{
+						this.turn_ended = true;
 						GOTO = 1000;
 						continue;
 					}
@@ -179,8 +173,10 @@ public class Dgame
 					{
 						vars.prsvec_1.prscon = 1;
 					}
+					turn_ended = true;
 					GOTO = 100;
-					continue;
+					Supp.errln("End Room: " + vars.play_1.here);
+					return;
 
 				case 900:
 					verbs.dverb1.valuac_(vars.oindex_1.valua);
@@ -192,7 +188,7 @@ public class Dgame
 				/* IF INPUT IS NOT 'ECHO' OR A DIRECTION, JUST ECHO. */
 
 				case 1000:
-					np.rdline_(vars.input_1.inbuf, 0);
+//					np.rdline_(vars.input_1.inbuf, 0);
 					++vars.state_1.moves;
 					/* !CHARGE FOR MOVES. */
 					if (!new String(vars.input_1.inbuf).startsWith("ECHO"))
@@ -227,9 +223,17 @@ public class Dgame
 					/* !VALID EXIT? */
 
 				case 1400:
-					Supp.more_output(new String(vars.input_1.inbuf));
+					StringBuilder buf = new StringBuilder();
+					for(char c : vars.input_1.inbuf)
+					{
+						if(c == 0)
+							break;
+						buf.append(c);
+					}
+					Supp.println(buf.toString());
 					vars.play_1.telflg = true;
 					/* !INDICATE OUTPUT. */
+					turn_ended = true;
 					GOTO = 1000;
 					continue;
 				/* !MORE ECHO ROOM. */
@@ -268,7 +272,7 @@ public class Dgame
 						continue;
 					}
 				case 2700:
-					i = 341;
+					int i = 341;
 					/* !FAILS. */
 					if (vars.play_1.telflg)
 					{
@@ -325,12 +329,12 @@ public class Dgame
 					GOTO = 350;
 					continue;
 			}
-		} while (true);
+		}
 
 	} /* game_ */
 
 	/* XENDMV- EXECUTE END OF MOVE FUNCTIONS. */
-	private void xendmv_(boolean flag) throws IOException
+	private void xendmv_(boolean flag)
 	{
 
 		if (!(flag))
@@ -367,7 +371,7 @@ public class Dgame
 	} /* xendmv_ */
 
 	/* XVEHIC- EXECUTE VEHICLE FUNCTION */
-	private boolean xvehic_(int n) throws IOException
+	private boolean xvehic_(int n)
 	{
 		/* System generated locals */
 		boolean ret_val;

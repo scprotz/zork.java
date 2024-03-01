@@ -3,7 +3,6 @@ package zork;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
-import java.io.IOException;
 
 public class Dso2
 {
@@ -23,7 +22,7 @@ public class Dso2
 
 	boolean moveto_(
 	int nr,
-	int who) throws IOException
+	int who) 
 	{
 	    /* System generated locals */
 	    boolean ret_val;
@@ -138,7 +137,7 @@ public class Dso2
 	static final int[] erank = new int[] { 20, 15, 10, 5, 0 };
 
 	/* SCORE-- PRINT OUT CURRENT SCORE */
-	void score_(boolean flg) throws IOException
+	void score_(boolean flg) 
 	{
 		/* Initialized data */
 
@@ -149,13 +148,12 @@ public class Dso2
 
 		if (vars.findex_1.endgmf)
 		{
-			Supp.more_output(null);
-			System.out.printf("Your score in the endgame ");
+			Supp.printf("Your score in the endgame ");
 			if (flg)
-				System.out.printf("would be");
+				Supp.printf("would be");
 			else
-				System.out.printf("is");
-			System.out.printf(" %d [total of %d points], in %d moves.\n", vars.state_1.egscor,
+				Supp.printf("is");
+			Supp.printf(" %d [total of %d points], in %d moves.\n", vars.state_1.egscor,
 					vars.state_1.egmxsc, vars.state_1.moves);
 
 			for (i = 1; i <= 5; ++i)
@@ -168,17 +166,16 @@ public class Dso2
 			}
 		}
 		/* !ENDGAME? */
-		Supp.more_output(null);
-		System.out.printf("Your score ");
+		Supp.printf("Your score ");
 		if (flg)
-			System.out.printf("would be");
+			Supp.printf("would be");
 		else
-			System.out.printf("is");
-		System.out.printf(" %d [total of %d points], in %d move", as, vars.state_1.mxscor,
+			Supp.printf("is");
+		Supp.printf(" %d [total of %d points], in %d move", as, vars.state_1.mxscor,
 				vars.state_1.moves);
 		if (vars.state_1.moves != 1)
-			System.out.printf("s");
-		System.out.printf(".\n");
+			Supp.printf("s");
+		Supp.printf(".\n");
 
 		for (i = 1; i <= 10; ++i)
 		{
