@@ -1,4 +1,45 @@
-get egg
+Prepare to Kill Thief - 
+	get egg
+	go to library
+	put egg in cellar
+	return to library
+	
+why? (prevents thief from taking stuff, thief opens egg)
+Kill Thief - 
+	(Kill Troll)
+	get knife
+	shoo cyclops
+	go up to treasure room
+	kill thief
+	return to library	
+	
+(why? - allows access to new area)
+Kill Troll -
+	get sword
+	get lamp
+	go to troll room
+	kill troll
+	return to library
+	
+(why? - allows to go up and down trapdoor)	
+Open Grate -
+	Go to skeleton
+	get keys
+	go to grate
+	open grate
+	go to library
+	
+(why? - allows access to new items/areas)	
+Close Dam	
+	
+(why? - turns off random carousel)	
+Disable whirring Machine
+
+(why? - complicated ritual)
+Do Ritual
+
+		
+	
 stash egg
 get painting
 stash painting

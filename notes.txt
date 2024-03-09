@@ -1,3 +1,14 @@
+Purpose of Experiment:
+
+To design a hierarchy based on natural language, and then grab policies for prior experiments
+
+Caveat:  Since we are using a NN, this means that there must be placeholders for all actions/options prior to first move.  All placeholder options will have No
+policy to start with.  Once an episode has an experience that matches an option, the partial trace is reviewed.  If it is 'better' than the current policy for an option, the option
+policy will be replaced.  
+
+There may be a need to clean up the state space, as it is currently in integer variables.  NNs tend to work best with one-hot encoded state spaces if possible for enumerated items 
+(like rooms or objects)
+
 
 
 Notes:  Lamp seems to have 462 steps of life, use sparingly when possible		

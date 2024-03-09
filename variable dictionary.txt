@@ -1,0 +1,87 @@
+
+# vars.vers_1.vmaj == Major version of Dungeon # char/int
+# vars.vers_1.vmin == Minor version of Dungeon # char/int
+# vars.vers_1.vedit == Patch version of Dungeon # char
+
+vars.play_1.winner == 
+vars.play_1.here == Current location of player # int
+vars.hack_1.thfpos == Current location of thief # int
+# vars.play_1.telflg ==  Place holder to tell something to player# boolean
+# vars.hack_1.thfflg == Is thief announced in current room # boolean 
+vars.hack_1.thfact ==  Is thief able to act or unconcious/dead # boolean
+vars.hack_1.swdact ==  is sword available (i.e. in inventory) # boolean
+# vars.hack_1.swdsta ==  sword status glowing # 0/1/2 
+vars.puzzle_1.cpvec[64] == puzzle state
+# j[0] = total game time - not really needed #
+# vars.state_1.moves == number of moves # int
+# vars.state_1.deaths == deaths # int, game over
+vars.state_1.rwscor == raw score for pickups and rooms 
+vars.state_1.egscor == endgame score
+# vars.state_1.mxload == max load
+# vars.state_1.ltshft == light shaft id
+vars.state_1.bloc == balloon location # int 
+vars.state_1.mungrm == blown up room?? # int
+#vars.state_1.hs == hello joke??
+vars.screen_1.fromdr == last direction # needed for bank vault # int
+vars.screen_1.scolrm == entry into scol room # int in list of scoldr
+vars.screen_1.scolac == walk through socl# int in list of scoldr
+
+for (int i = 0; i < 220; i++)
+	vars.objcts_1.odesc1[220]);
+for (int i = 0; i < 220; i++)
+	vars.objcts_1.odesc2[220]);
+for (int i = 0; i < 220; i++)
+	vars.objcts_1.oflag1[220]);
+for (int i = 0; i < 220; i++)
+	vars.objcts_1.oflag2[220]);
+for (int i = 0; i < 220; i++)
+	vars.objcts_1.ofval[220]);
+for (int i = 0; i < 220; i++)
+	vars.objcts_1.otval[220]);
+for (int i = 0; i < 220; i++)
+	vars.objcts_1.osize[220]);
+for (int i = 0; i < 220; i++)
+	vars.objcts_1.ocapac[220]);
+for (int i = 0; i < 220; i++)
+	vars.objcts_1.oroom[220]);
+for (int i = 0; i < 220; i++)
+	vars.objcts_1.oadv[220]);
+for (int i = 0; i < 220; i++)
+	vars.objcts_1.ocan[220]);
+
+for (int i = 0; i < 200; i++)
+	vars.rooms_1.rval[200]);
+for (int i = 0; i < 200; i++)
+	vars.rooms_1.rflag[200]);
+
+for (int i = 0; i < 4; i++)
+	vars.advs_1.aroom[4]);
+for (int i = 0; i < 4; i++)
+	vars.advs_1.ascore[4]);
+for (int i = 0; i < 4; i++)
+	vars.advs_1.avehic[4]);
+for (int i = 0; i < 4; i++)
+	vars.advs_1.astren[4]);
+for (int i = 0; i < 4; i++)
+	vars.advs_1.aflag[4]);
+
+for (int i = 0; i < 46; i++)
+{
+	if (vars.findex_1.flags(i))
+		1);
+	else
+		0);
+}
+for (int i = 0; i < 22; i++)
+	vars.findex_1.switch_(i));
+for (int i = 0; i < 4; i++)
+	vars.vill_1.vprob[4]);
+for (int i = 0; i < 25; i++)
+{
+	if (vars.cevent_1.cflag[25]) == # boolean
+		1);
+	else
+		0);
+}
+for (int i = 0; i < 25; i++)
+	vars.cevent_1.ctick[25]);

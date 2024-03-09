@@ -95,7 +95,7 @@ public class DMain
 		catch (IOException e)
 		{
 			Supp.errln("Error trying to read file : " + fileName);
-			e.printStackTrace();
+//			e.printStackTrace();
 		} 
 		
 		return actions;
