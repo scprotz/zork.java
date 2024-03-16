@@ -26,62 +26,62 @@ vars.screen_1.fromdr == last direction # needed for bank vault # int
 vars.screen_1.scolrm == entry into scol room # int in list of scoldr
 vars.screen_1.scolac == walk through socl# int in list of scoldr
 
+#for (int i = 0; i < 220; i++)
+#	vars.objcts_1.odesc1[220]);
+#for (int i = 0; i < 220; i++)
+#	vars.objcts_1.odesc2[220]);
 for (int i = 0; i < 220; i++)
-	vars.objcts_1.odesc1[220]);
+	vars.objcts_1.oflag1[220]); # should probably 1 hot encode 16 bits
 for (int i = 0; i < 220; i++)
-	vars.objcts_1.odesc2[220]);
+	vars.objcts_1.oflag2[220]); # should probably 1 hot encode 16 bits
+#for (int i = 0; i < 220; i++)
+#	vars.objcts_1.ofval[220]); # object values
+#for (int i = 0; i < 220; i++)
+#	vars.objcts_1.otval[220]); # object values
+#for (int i = 0; i < 220; i++)
+#	vars.objcts_1.osize[220]);
+#for (int i = 0; i < 220; i++)
+#	vars.objcts_1.ocapac[220]);
 for (int i = 0; i < 220; i++)
-	vars.objcts_1.oflag1[220]);
+	vars.objcts_1.oroom[220]); # current location of object - needs to be 1 hot encoded room id
 for (int i = 0; i < 220; i++)
-	vars.objcts_1.oflag2[220]);
+	vars.objcts_1.oadv[220]); # id of entity carrying the object
 for (int i = 0; i < 220; i++)
-	vars.objcts_1.ofval[220]);
-for (int i = 0; i < 220; i++)
-	vars.objcts_1.otval[220]);
-for (int i = 0; i < 220; i++)
-	vars.objcts_1.osize[220]);
-for (int i = 0; i < 220; i++)
-	vars.objcts_1.ocapac[220]);
-for (int i = 0; i < 220; i++)
-	vars.objcts_1.oroom[220]);
-for (int i = 0; i < 220; i++)
-	vars.objcts_1.oadv[220]);
-for (int i = 0; i < 220; i++)
-	vars.objcts_1.ocan[220]);
+	vars.objcts_1.ocan[220]); # object container
 
 for (int i = 0; i < 200; i++)
-	vars.rooms_1.rval[200]);
+	vars.rooms_1.rval[200]);  # initial room value - can probably be binary to show zero/non-zero
 for (int i = 0; i < 200; i++)
-	vars.rooms_1.rflag[200]);
+	vars.rooms_1.rflag[200]); # room flags 16 values probably 1 hot encode
 
 for (int i = 0; i < 4; i++)
-	vars.advs_1.aroom[4]);
+	vars.advs_1.aroom[4]);   # container room for actor??
 for (int i = 0; i < 4; i++)
-	vars.advs_1.ascore[4]);
+	vars.advs_1.ascore[4]);  # actor score?
 for (int i = 0; i < 4; i++)
-	vars.advs_1.avehic[4]);
+	vars.advs_1.avehic[4]);  # vehicle actor is in
 for (int i = 0; i < 4; i++)
-	vars.advs_1.astren[4]);
+	vars.advs_1.astren[4]);  # actor strength
 for (int i = 0; i < 4; i++)
-	vars.advs_1.aflag[4]);
+	vars.advs_1.aflag[4]);  # actor staggered or not
 
 for (int i = 0; i < 46; i++)
 {
-	if (vars.findex_1.flags(i))
+	if (vars.findex_1.flags(i))   # game flags
 		1);
 	else
 		0);
 }
 for (int i = 0; i < 22; i++)
-	vars.findex_1.switch_(i));
+	vars.findex_1.switch_(i));   # game variables
 for (int i = 0; i < 4; i++)
-	vars.vill_1.vprob[4]);
+	vars.vill_1.vprob[4]);     # villain probability awake
 for (int i = 0; i < 25; i++)
 {
-	if (vars.cevent_1.cflag[25]) == # boolean
+	if (vars.cevent_1.cflag[25]) == # clock event on/off
 		1);
 	else
 		0);
 }
 for (int i = 0; i < 25; i++)
-	vars.cevent_1.ctick[25]);
+	vars.cevent_1.ctick[25]);  # clock event time
