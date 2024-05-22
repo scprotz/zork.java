@@ -54,6 +54,20 @@ public class DMain
 	/**
 	 * Walkthrough provided by
 	 * http://www.deblauweschicht.nl/retrogaming/resources/MainframeZork_walkthrough.txt
+	 * 
+	 * Map provided at:
+	 * https://www.reddit.com/r/zork/comments/5ximil/zork_map_mit_version_fantastic_game_i_spent_some/#lightbox
+	 * 
+	 * 
+	 * @article{ammanabrolu2021situated,
+  title={Situated language learning via interactive narratives},
+  author={Ammanabrolu, Prithviraj and Riedl, Mark O},
+  journal={Patterns},
+  volume={2},
+  number={9},
+  year={2021},
+  publisher={Elsevier}
+}
 	 **/
 
 	public static ArrayList<String> loadActionFile(String fileName)
@@ -80,6 +94,9 @@ public class DMain
 					block_comment = !block_comment;
 					continue;
 				}
+				
+				if(block_comment)
+					continue;
 			
 				// strip any in-line comments //				
 				if (buf.indexOf('#') != -1)
@@ -91,6 +108,8 @@ public class DMain
 				if (buf.length() > 0 )
 					actions.add(buf);				
 			}			
+			reader.close();
+			
 		}
 		catch (IOException e)
 		{
@@ -112,7 +131,7 @@ public class DMain
 		// if actions hasn't been initialized, initialize it //
 		if (actions == null)
 		{
-			actions = loadActionFile("tasks.properties");
+			actions = loadActionFile("walkthrough.properties");
 		}
 		
 		String action = "";
